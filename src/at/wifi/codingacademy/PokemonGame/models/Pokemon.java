@@ -6,16 +6,19 @@ public class Pokemon {
     protected int health;
     protected int damage;
     protected int defense;
+    protected Attacks attack;
 
     //Konstruktor
 
-    public Pokemon(String name, Elements element, int health, int damage, int defense) {
+    public Pokemon(String name, Elements element, int health, int damage, int defense, Attacks attack) {
         this.name = name;
         this.element = element;
         this.health = health;
         this.damage = damage;
         this.defense = defense;
+        this.attack = attack;
     }
+
 
     //Methoden
 
@@ -59,6 +62,14 @@ public class Pokemon {
         this.defense = defense;
     }
 
+    public Attacks getAttack() {
+        return attack;
+    }
+
+    public void setAttack(Attacks attack) {
+        this.attack = attack;
+    }
+
     @Override
     public String toString() {
         return "Pokemon{" +
@@ -67,6 +78,7 @@ public class Pokemon {
                 ", health=" + health +
                 ", damage=" + damage +
                 ", defense=" + defense +
+                ", attack=" + attack +
                 '}';
     }
 }
