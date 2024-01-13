@@ -8,8 +8,7 @@ import java.util.Random;
 
 public class Program {
     public static void main(String[] args){
-    Player Ashe = new Player();
-    Ashe.addPokemon(new Pokemon());
+
 
         Pokemon pikachu = new Pokemon("Pikachu", Elements.ELECTRICITY, 80, 130, 15, null );
         Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null);
@@ -17,6 +16,5 @@ public class Program {
         Pokemon flamiau = new Pokemon("Flamiau", Elements.FIRE, 100, 115, 10, null);
         Pokemon mewto = new Pokemon("Mewto", Elements.MAGIC, 500, 1000, 200, Attacks.INSTANTDEATH);
 
-        Ashe.addPokemon(new Pokemon());
     }
 }
