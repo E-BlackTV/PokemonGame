@@ -24,5 +24,19 @@ public class Program {
                 "\n 3: " + bisasam +
                 "\n 4: " + flamiau );
         int i = scan.nextInt();
+
+        protected int playerNumber = 0;
+
+        public void choosePlayer() {
+            if (playerNumber <= 1) {
+                Scanner choice = new Scanner(System.in);
+
+                Switch (choice){
+                    case 1:
+                        Player.
+
+                }
+            }
+        }
     }
 }
