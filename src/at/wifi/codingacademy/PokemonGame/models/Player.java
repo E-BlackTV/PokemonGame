@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public class Player {
     protected String name;
-    protected ArrayList<Warrior> warriors;
+    protected ArrayList<Pokemon> pokemons;
 
 }
