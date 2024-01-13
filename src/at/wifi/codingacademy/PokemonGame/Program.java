@@ -9,8 +9,6 @@ import java.util.Random;
 
 public class Program {
     public static void main(String[] args) {
-
-
         Pokemon pikachu = new Pokemon("Pikachu", Elements.ELECTRICITY, 80, 130, 15, null);
         Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null);
         Pokemon bisasam = new Pokemon("Bisasam", Elements.EARTH, 140, 55, 45, null);
