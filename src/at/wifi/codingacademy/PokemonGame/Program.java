@@ -19,7 +19,8 @@ public class Program {
         // Player Initialization
         Player Ash = new Player(1, 1);
         Player Sindy = new Player(1, 1);
-
+        //Helps checking if Pokemon is disoriented
+        boolean disoriented = false;
         // Scanner for User Input
         Scanner scanner = new Scanner(System.in);
 
@@ -112,12 +113,13 @@ public class Program {
         if (ashAttackChoice == 3) {
             // If Ash's Pokemon is disoriented
             System.out.println("Your Pokemon is disoriented");
-            boolean disoriented = true;
+            disoriented = true;
         }
 
         while (disoriented) {
             Sindy.setAttackMultiplier(0.5);
             Sindy.setHealthMultiplier(0.5);
         }
+
     }
 }
