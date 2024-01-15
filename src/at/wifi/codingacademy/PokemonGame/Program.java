@@ -76,5 +76,18 @@ public class Program {
                 break;
         }
         System.out.println(Sindy);
+
+        System.out.println("Ash choose your Attacks for" + Ash.getPokemons() +
+                "\n 1: " + Attacks.PUNCH +
+                "\n 2: " + Attacks.SHOOT +
+                "\n 3: " + Attacks.DISORIENTATE );
+
+        int ashattackchoice = scanner.nextInt();
+
+        switch (ashattackchoice) {
+            case 1:
+                Ash. //Keine Ahnung wie man das machen soll und ich denke auch dass das alles in eine While schleife muss biss dass einer der Pokemins 0 hp hat rennt das programm
+
+        }
     }
 }
