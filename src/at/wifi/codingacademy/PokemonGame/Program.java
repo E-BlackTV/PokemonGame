@@ -15,35 +15,54 @@ public class Program {
         Pokemon flamiau = new Pokemon("Flamiau", Elements.FIRE, 100, 115, 10, null);
         Pokemon mewto = new Pokemon("Mewto", Elements.MAGIC, 500, 1000, 200, Attacks.INSTANTDEATH);
 
-        Player Ashe = new Player(1, 1);
+        Player Ash = new Player(1, 1);
 
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ash choose your pokemon by tiping in the number: " +
+                "\n 1: " + pikachu +
+                "\n 2: " + glumanda +
+                "\n 3: " + bisasam +
+                "\n 4: " + flamiau);
+        int choice = scanner.nextInt();
 
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Ashe choose your pokemon by tiping in the number: " +
-                    "\n 1: " + pikachu +
-                    "\n 2: " + glumanda +
-                    "\n 3: " + bisasam +
-                    "\n 4: " + flamiau);
-            int choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    Ashe.addPokemon(pikachu);
-                    break;
-                case 2:
-                    Ashe.addPokemon(glumanda);
-                    break;
-                case 3:
-                    Ashe.addPokemon(bisasam);
-                    break;
-                case 4:
-                    Ashe.addPokemon(flamiau);
-                    break;
-            }
-            System.out.println(Ashe);
-
+        switch (choice) {
+            case 1:
+                Ash.addPokemon(pikachu);
+                break;
+            case 2:
+                Ash.addPokemon(glumanda);
+                break;
+            case 3:
+                Ash.addPokemon(bisasam);
+                break;
+            case 4:
+                Ash.addPokemon(flamiau);
+                break;
+        }
+        System.out.println(Ash);
 
 
+        System.out.println("Ash choose your pokemon by tiping in the number: " +
+                "\n 1: " + pikachu +
+                "\n 2: " + glumanda +
+                "\n 3: " + bisasam +
+                "\n 4: " + flamiau);
+
+        switch (choice) {
+            case 1:
+                Ash.addPokemon(pikachu);
+                break;
+            case 2:
+                Ash.addPokemon(glumanda);
+                break;
+            case 3:
+                Ash.addPokemon(bisasam);
+                break;
+            case 4:
+                Ash.addPokemon(flamiau);
+                break;
+        }
+        System.out.println(Ash);
     }
 }
