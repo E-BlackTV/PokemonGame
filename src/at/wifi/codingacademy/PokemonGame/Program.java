@@ -16,10 +16,11 @@ public class Program {
         Pokemon mewto = new Pokemon("Mewto", Elements.MAGIC, 500, 1000, 200, Attacks.INSTANTDEATH);
 
         Player Ash = new Player(1, 1);
+        Player Sindy = new Player(1, 1);
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ash choose your pokemon by tiping in the number: " +
+        System.out.println("Ash choose your pokemon by typing in the number: " +
                 "\n 1: " + pikachu +
                 "\n 2: " + glumanda +
                 "\n 3: " + bisasam +
@@ -43,7 +44,7 @@ public class Program {
         System.out.println(Ash);
 
 
-        System.out.println("Ash choose your pokemon by tiping in the number: " +
+        System.out.println("Sindy choose your pokemon by typing in the number: " +
                 "\n 1: " + pikachu +
                 "\n 2: " + glumanda +
                 "\n 3: " + bisasam +
@@ -51,18 +52,18 @@ public class Program {
 
         switch (choice) {
             case 1:
-                Ash.addPokemon(pikachu);
+                Sindy.addPokemon(pikachu);
                 break;
             case 2:
-                Ash.addPokemon(glumanda);
+                Sindy.addPokemon(glumanda);
                 break;
             case 3:
-                Ash.addPokemon(bisasam);
+                Sindy.addPokemon(bisasam);
                 break;
             case 4:
-                Ash.addPokemon(flamiau);
+                Sindy.addPokemon(flamiau);
                 break;
         }
-        System.out.println(Ash);
+        System.out.println(Sindy);
     }
 }
