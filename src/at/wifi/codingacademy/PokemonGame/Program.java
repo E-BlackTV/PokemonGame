@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         // Pokemon Initialization
-        Pokemon pikachu = new Pokemon("Pikachu", Elements.ELECTRICITY, 80, 130, 15, null);
-        Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null);
-        Pokemon bisasam = new Pokemon("Bisasam", Elements.EARTH, 140, 55, 45, null);
-        Pokemon flamiau = new Pokemon("Flamiau", Elements.FIRE, 100, 115, 10, null);
-        Pokemon mewto = new Pokemon("Mewto", Elements.MAGIC, 500, 1000, 200, Attacks.INSTANTDEATH);
+        Pokemon pikachu = new Pokemon("Pikachu", Elements.ELECTRICITY, 80, 130, 15, null, false);
+        Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null, false);
+        Pokemon bisasam = new Pokemon("Bisasam", Elements.EARTH, 140, 55, 45, null, false);
+        Pokemon flamiau = new Pokemon("Flamiau", Elements.FIRE, 100, 115, 10, null, false);
+        Pokemon mewto = new Pokemon("Mewto", Elements.MAGIC, 500, 1000, 200, Attacks.INSTANTDEATH, false);
 
         // Player Initialization
         Player Ash = new Player(1, 1);
@@ -109,51 +109,15 @@ public class Program {
                 break;
         }
 
-        // Sindy's Attack Selection
-        int sindyAttackChoice = scanner.nextInt();
-
         if (ashAttackChoice == 3) {
             // If Ash's Pokemon is disoriented
             System.out.println("Your Pokemon is disoriented");
+            boolean disoriented = true;
+        }
 
-            switch (sindyAttackChoice) {
-                case 1:
-                    // Set Attack and Health Multipliers for Sindy's Pokemon
-                    Sindy.setAttackMultiplier(0.3);
-                    Sindy.setHealthMultiplier(1);
-                    break;
-                case 2:
-                    Sindy.setAttackMultiplier(0.4);
-                    Sindy.setHealthMultiplier(1);
-                    break;
-                case 3:
-                    Sindy.setAttackMultiplier(0.5);
-                    Sindy.setHealthMultiplier(1);
-                    break;
-                default:
-                    System.out.println("Invalid choice: " + sindyAttackChoice);
-                    break;
-            }
-        } else {
-            // If Ash's Pokemon is not disoriented
-            switch (sindyAttackChoice) {
-                case 1:
-                    // Set Attack and Health Multipliers for Sindy's Pokemon
-                    Sindy.setAttackMultiplier(1.2);
-                    Sindy.setHealthMultiplier(0.9);
-                    break;
-                case 2:
-                    Sindy.setAttackMultiplier(1.4);
-                    Sindy.setHealthMultiplier(0.8);
-                    break;
-                case 3:
-                    Sindy.setAttackMultiplier(0.5);
-                    Sindy.setHealthMultiplier(1.2);
-                    break;
-                default:
-                    System.out.println("Invalid choice: " + sindyAttackChoice);
-                    break;
-            }
+        while (disoriented) {
+            Sindy.setAttackMultiplier(0.5);
+            Sindy.setHealthMultiplier(0.5);
         }
     }
 }

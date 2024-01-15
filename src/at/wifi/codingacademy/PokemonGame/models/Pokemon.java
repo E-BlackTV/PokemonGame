@@ -8,17 +8,18 @@ public class Pokemon {
     protected int damage;        // Damage points of the Pokemon
     protected int defense;       // Defense points of the Pokemon
     protected Attacks attack;    // Type of attack of the Pokemon
+    protected boolean disorient = false; // Tells if the Pokemon is currently disoriented
 
     // Constructor to initialize the Pokemon
-    public Pokemon(String name, Elements element, int health, int damage, int defense, Attacks attack) {
+    public Pokemon(String name, Elements element, int health, int damage, int defense, Attacks attack, boolean disorient) {
         this.name = name;
         this.element = element;
         this.health = health;
         this.damage = damage;
         this.defense = defense;
         this.attack = attack;
+        this.disorient = disorient;
     }
-
     // Getter for the name of the Pokemon
     public String getName() {
         return name;
@@ -77,6 +78,14 @@ public class Pokemon {
     // Setter for the type of attack of the Pokemon
     public void setAttack(Attacks attack) {
         this.attack = attack;
+    }
+
+    public boolean isDisorient() {
+        return disorient;
+    }
+
+    public void setDisorient(boolean disorient) {
+        this.disorient = disorient;
     }
 
     // toString method to represent the Pokemon object as a string
