@@ -6,6 +6,7 @@ public class Player {
     protected ArrayList<Pokemon> pokemons;
     protected double attackMultiplier;
     protected double healthMultiplier;
+    protected Pokemon selectedPokemon;
 
     public Player(double attackMultiplier, double healthMultiplier) {
         this.pokemons = new ArrayList<Pokemon>();
@@ -41,6 +42,14 @@ public class Player {
 
     public void setHealthMultiplier(double healthMultiplier) {
         this.healthMultiplier = healthMultiplier;
+    }
+
+    public void selectAttack(Pokemon pokemon, Attacks attack) {
+        pokemon.setAttack(attack);
+    }
+
+    public Pokemon getSelectedPokemon() {
+        return selectedPokemon;
     }
 
     @Override

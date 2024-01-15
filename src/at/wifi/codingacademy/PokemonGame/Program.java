@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         Pokemon pikachu = new Pokemon("Pikachu", Elements.ELECTRICITY, 80, 130, 15, null);
-        Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null);
+        Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null );
         Pokemon bisasam = new Pokemon("Bisasam", Elements.EARTH, 140, 55, 45, null);
         Pokemon flamiau = new Pokemon("Flamiau", Elements.FIRE, 100, 115, 10, null);
         Pokemon mewto = new Pokemon("Mewto", Elements.MAGIC, 500, 1000, 200, Attacks.INSTANTDEATH);
@@ -82,15 +82,20 @@ public class Program {
                 "\n 2: " + Attacks.SHOOT +
                 "\n 3: " + Attacks.DISORIENTATE );
 
-        int ashattackchoice = scanner.nextInt();
-
-        switch (ashattackchoice) {
+        int ashAttackChoice = scanner.nextInt();
+        switch (ashAttackChoice) {
             case 1:
-                Ash.
-            //Keine Ahnung wie man das machen soll und ich denke auch
-                // dass das alles in eine While schleife muss bis dass
-                // einer der Pokemins 0 hp hat rennt das programm
-
+                Ash.selectAttack(Ash.getSelectedPokemon(), Attacks.PUNCH);
+                break;
+            case 2:
+                Ash.selectAttack(Ash.getSelectedPokemon(), Attacks.SHOOT);
+                break;
+            case 3:
+                Ash.selectAttack(Ash.getSelectedPokemon(), Attacks.DISORIENTATE);
+                break;
+            default:
+                System.out.println("Invalid choice: " + ashAttackChoice);
+                break;
+        }
         }
     }
-}
