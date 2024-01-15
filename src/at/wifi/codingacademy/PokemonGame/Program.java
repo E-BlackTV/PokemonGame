@@ -18,16 +18,15 @@ public class Program {
         Player Ash = new Player(1, 1);
         Player Sindy = new Player(1, 1);
 
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ash choose your pokemon by typing in the number: " +
                 "\n 1: " + pikachu +
                 "\n 2: " + glumanda +
                 "\n 3: " + bisasam +
                 "\n 4: " + flamiau);
-        int choice = scanner.nextInt();
+        int ashChoice = scanner.nextInt();
 
-        switch (choice) {
+        switch (ashChoice) {
             case 1:
                 Ash.addPokemon(pikachu);
                 break;
@@ -40,17 +39,23 @@ public class Program {
             case 4:
                 Ash.addPokemon(flamiau);
                 break;
+            case 999:
+                Ash.addPokemon(mewto);
+                break;
+            default:
+                System.out.println("Invalid choice: " + ashChoice);
+                break;
         }
         System.out.println(Ash);
-
 
         System.out.println("Sindy choose your pokemon by typing in the number: " +
                 "\n 1: " + pikachu +
                 "\n 2: " + glumanda +
                 "\n 3: " + bisasam +
                 "\n 4: " + flamiau);
+        int sindyChoice = scanner.nextInt();
 
-        switch (choice) {
+        switch (sindyChoice) {
             case 1:
                 Sindy.addPokemon(pikachu);
                 break;
@@ -62,6 +67,12 @@ public class Program {
                 break;
             case 4:
                 Sindy.addPokemon(flamiau);
+                break;
+            case 999:
+                Sindy.addPokemon(mewto);
+                break;
+            default:
+                System.out.println("Invalid choice: " + sindyChoice);
                 break;
         }
         System.out.println(Sindy);
