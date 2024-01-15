@@ -86,7 +86,10 @@ public class Program {
 
         switch (ashattackchoice) {
             case 1:
-                Ash. //Keine Ahnung wie man das machen soll und ich denke auch dass das alles in eine While schleife muss biss dass einer der Pokemins 0 hp hat rennt das programm
+                Ash.
+            //Keine Ahnung wie man das machen soll und ich denke auch
+                // dass das alles in eine While schleife muss bis dass
+                // einer der Pokemins 0 hp hat rennt das programm
 
         }
     }
