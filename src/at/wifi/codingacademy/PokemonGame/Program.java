@@ -9,16 +9,21 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
+        // Pokemon Initialization
         Pokemon pikachu = new Pokemon("Pikachu", Elements.ELECTRICITY, 80, 130, 15, null);
-        Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null );
+        Pokemon glumanda = new Pokemon("Glumanda", Elements.FIRE, 90, 120, 20, null);
         Pokemon bisasam = new Pokemon("Bisasam", Elements.EARTH, 140, 55, 45, null);
         Pokemon flamiau = new Pokemon("Flamiau", Elements.FIRE, 100, 115, 10, null);
         Pokemon mewto = new Pokemon("Mewto", Elements.MAGIC, 500, 1000, 200, Attacks.INSTANTDEATH);
 
+        // Player Initialization
         Player Ash = new Player(1, 1);
         Player Sindy = new Player(1, 1);
 
+        // Scanner for User Input
         Scanner scanner = new Scanner(System.in);
+
+        // Ash's Pokemon Selection
         System.out.println("Ash choose your pokemon by typing in the number: " +
                 "\n 1: " + pikachu +
                 "\n 2: " + glumanda +
@@ -48,6 +53,7 @@ public class Program {
         }
         System.out.println(Ash);
 
+        // Sindy's Pokemon Selection
         System.out.println("Sindy choose your pokemon by typing in the number: " +
                 "\n 1: " + pikachu +
                 "\n 2: " + glumanda +
@@ -77,14 +83,16 @@ public class Program {
         }
         System.out.println(Sindy);
 
-        System.out.println("Ash choose your Attacks for" + Ash.getPokemons() +
+        // Ash's Attack Selection
+        System.out.println("Ash choose your Attacks for " + Ash.getSelectedPokemon() +
                 "\n 1: " + Attacks.PUNCH +
                 "\n 2: " + Attacks.SHOOT +
-                "\n 3: " + Attacks.DISORIENTATE );
+                "\n 3: " + Attacks.DISORIENTATE);
 
         int ashAttackChoice = scanner.nextInt();
         switch (ashAttackChoice) {
             case 1:
+                // Set Attack and Health Multipliers for Ash's Pokemon
                 Ash.setAttackMultiplier(1.2);
                 Ash.setHealthMultiplier(0.9);
                 break;
@@ -100,13 +108,17 @@ public class Program {
                 System.out.println("Invalid choice: " + ashAttackChoice);
                 break;
         }
+
+        // Sindy's Attack Selection
         int sindyAttackChoice = scanner.nextInt();
 
         if (ashAttackChoice == 3) {
+            // If Ash's Pokemon is disoriented
             System.out.println("Your Pokemon is disoriented");
 
             switch (sindyAttackChoice) {
                 case 1:
+                    // Set Attack and Health Multipliers for Sindy's Pokemon
                     Sindy.setAttackMultiplier(0.3);
                     Sindy.setHealthMultiplier(1);
                     break;
@@ -122,9 +134,11 @@ public class Program {
                     System.out.println("Invalid choice: " + sindyAttackChoice);
                     break;
             }
-        } else { // Corrected the syntax error here
+        } else {
+            // If Ash's Pokemon is not disoriented
             switch (sindyAttackChoice) {
                 case 1:
+                    // Set Attack and Health Multipliers for Sindy's Pokemon
                     Sindy.setAttackMultiplier(1.2);
                     Sindy.setHealthMultiplier(0.9);
                     break;
@@ -141,6 +155,5 @@ public class Program {
                     break;
             }
         }
-
     }
-    }
+}
