@@ -44,9 +44,6 @@ public class Player {
         this.healthMultiplier = healthMultiplier;
     }
 
-    public void selectAttack(Pokemon pokemon, Attacks attack) {
-        pokemon.setAttack(attack);
-    }
 
     public Pokemon getSelectedPokemon() {
         return selectedPokemon;

@@ -85,17 +85,62 @@ public class Program {
         int ashAttackChoice = scanner.nextInt();
         switch (ashAttackChoice) {
             case 1:
-                Ash.selectAttack(Ash.getSelectedPokemon(), Attacks.PUNCH);
+                Ash.setAttackMultiplier(1.2);
+                Ash.setHealthMultiplier(0.9);
                 break;
             case 2:
-                Ash.selectAttack(Ash.getSelectedPokemon(), Attacks.SHOOT);
+                Ash.setAttackMultiplier(1.4);
+                Ash.setHealthMultiplier(0.8);
                 break;
             case 3:
-                Ash.selectAttack(Ash.getSelectedPokemon(), Attacks.DISORIENTATE);
+                Ash.setAttackMultiplier(0.5);
+                Ash.setHealthMultiplier(1.2);
                 break;
             default:
                 System.out.println("Invalid choice: " + ashAttackChoice);
                 break;
         }
+        int sindyAttackChoice = scanner.nextInt();
+
+        if (ashAttackChoice == 3) {
+            System.out.println("Your Pokemon is disoriented");
+
+            switch (sindyAttackChoice) {
+                case 1:
+                    Sindy.setAttackMultiplier(0.3);
+                    Sindy.setHealthMultiplier(1);
+                    break;
+                case 2:
+                    Sindy.setAttackMultiplier(0.4);
+                    Sindy.setHealthMultiplier(1);
+                    break;
+                case 3:
+                    Sindy.setAttackMultiplier(0.5);
+                    Sindy.setHealthMultiplier(1);
+                    break;
+                default:
+                    System.out.println("Invalid choice: " + sindyAttackChoice);
+                    break;
+            }
+        } else { // Corrected the syntax error here
+            switch (sindyAttackChoice) {
+                case 1:
+                    Sindy.setAttackMultiplier(1.2);
+                    Sindy.setHealthMultiplier(0.9);
+                    break;
+                case 2:
+                    Sindy.setAttackMultiplier(1.4);
+                    Sindy.setHealthMultiplier(0.8);
+                    break;
+                case 3:
+                    Sindy.setAttackMultiplier(0.5);
+                    Sindy.setHealthMultiplier(1.2);
+                    break;
+                default:
+                    System.out.println("Invalid choice: " + sindyAttackChoice);
+                    break;
+            }
         }
+
+    }
     }
